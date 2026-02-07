@@ -2,22 +2,71 @@
 
 A full-stack e-commerce application with single-device session management, built with Node.js, Express, MongoDB, React, and Tailwind CSS.
 
-## Features
+## 🌟 Features
 
-- User authentication with JWT
-- Single-device login enforcement
-- Browse products
-- Add items to cart
-- Place orders
-- View order history
+- **User Authentication** with JWT
+- **Single-Device Login** enforcement
+- **Product Browsing** with grid layout
+- **Shopping Cart** management
+- **Order Placement** and history
+- **Responsive Design** with Tailwind CSS
+- **Real-time Cart Updates**
+- **Toast Notifications**
 
-## Prerequisites
+## 🚀 Live Demo
+
+- **Frontend**: [Deploy on Vercel](https://vercel.com)
+- **Backend**: [Deploy on Render](https://render.com)
+- **Database**: MongoDB Atlas
+
+## 📸 Screenshots
+
+### Login & Authentication
+Single-device login with beautiful gradient UI
+
+### Product Grid
+Browse items with add-to-cart functionality
+
+### Shopping Cart
+Manage cart items and proceed to checkout
+
+### Order History
+View all completed orders
+
+## 🛠 Tech Stack
+
+### Backend
+- **Node.js** & **Express.js** - Web framework
+- **MongoDB** & **Mongoose** - Database
+- **JWT** - Authentication
+- **bcryptjs** - Password hashing
+- **CORS** - Cross-origin resource sharing
+
+### Frontend
+- **React 18** - UI library
+- **Vite** - Build tool
+- **Tailwind CSS** - Styling
+- **Axios** - HTTP client
+- **Lucide React** - Icons
+
+## 📋 Prerequisites
 
 - Node.js (v16 or higher)
-- MongoDB (running locally or MongoDB Atlas)
+- MongoDB (local or Atlas)
 - npm or yarn
+- Git
 
-## Installation
+## 🚀 Quick Start
+
+### Automated Setup
+
+```bash
+git clone https://github.com/vamsisripada/ABCDE_ventures_Assignment.git
+cd ABCDE_ventures_Assignment
+./setup.sh
+```
+
+### Manual Setup
 
 ### Backend Setup
 
@@ -69,7 +118,59 @@ npm run dev
 
 The frontend will run on `http://localhost:3000`
 
-## Usage
+## 🌐 Production Deployment
+
+### Quick Deploy to Production
+
+1. **MongoDB Atlas Setup**
+   - Create free account at [MongoDB Atlas](https://mongodb.com/cloud/atlas)
+   - Create cluster and get connection string
+   - Whitelist all IPs (0.0.0.0/0)
+
+2. **Deploy Backend** (Render)
+   - Sign up at [Render.com](https://render.com)
+   - New Web Service → Connect GitHub repo
+   - Root directory: `backend`
+   - Add environment variables:
+     ```
+     MONGODB_URI=your_atlas_connection_string
+     JWT_SECRET=your_secure_secret_key
+     NODE_ENV=production
+     FRONTEND_URL=https://your-frontend.vercel.app
+     ```
+
+3. **Deploy Frontend** (Vercel)
+   - Sign up at [Vercel.com](https://vercel.com)
+   - Import GitHub repo
+   - Root directory: `frontend`
+   - Add environment variable:
+     ```
+     VITE_API_URL=https://your-backend.onrender.com/api
+     ```
+
+4. **Seed Production Database**
+   - Go to Render dashboard → Shell
+   - Run: `npm run seed`
+
+📖 **Detailed deployment guide**: See [DEPLOYMENT.md](DEPLOYMENT.md)
+
+## 🔐 Environment Variables
+
+### Backend (.env)
+```env
+PORT=5002
+MONGODB_URI=mongodb://localhost:27017/shopping-cart
+JWT_SECRET=your_jwt_secret_key_here_change_in_production
+NODE_ENV=development
+FRONTEND_URL=http://localhost:3000
+```
+
+### Frontend (.env)
+```env
+VITE_API_URL=http://localhost:5002/api
+```
+
+## 📁 Project Structure
 
 1. Open your browser and navigate to `http://localhost:3000`
 2. Create a new account by clicking "Sign Up"
