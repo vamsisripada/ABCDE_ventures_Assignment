@@ -1,0 +1,25 @@
+# MongoDB Atlas Configuration
+
+## Connection String Template
+
+Once you complete MongoDB Atlas setup, your connection string will look like:
+
+```
+mongodb+srv://USERNAME:PASSWORD@cluster0.xxxxx.mongodb.net/shopping-cart?retryWrites=true&w=majority
+```
+
+## Steps Completed:
+- [ ] Created MongoDB Atlas account
+- [ ] Created free M0 cluster
+- [ ] Created database user (username + password)
+- [ ] Whitelisted IP: 0.0.0.0/0
+- [ ] Copied connection string
+
+## Your Connection String:
+(Paste it here after getting it from Atlas)
+
+```
+mongodb+srv://...
+```
+
+## Next: Update this in Render when deploying backend
